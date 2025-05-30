@@ -13,13 +13,16 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
+		"@types/bun": "^1.2.15",
 		"svelte-check": "^4.2.1"
 	},
 	"dependencies": {
+		"@surrealdb/surrealdb": "npm:@jsr/surrealdb__surrealdb",
 		"@sveltejs/adapter-auto": "^6.0.1",
 		"@sveltejs/kit": "^2.21.1",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
 		"@tailwindcss/vite": "^4.0.0",
+		"arctic": "^3.7.0",
 		"svelte": "^5.33.10",
 		"tailwindcss": "^4.0.0",
 		"typescript": "^5.8.3",

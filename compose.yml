@@ -1,0 +1,20 @@
+# Config file for compose, a tool that allows for easily managing multiple containers.
+# https://docs.docker.com/compose/
+
+services:
+    surreal:
+        # not :nightly because doing that once caused failures when graph linking
+        # and also caused errors with query parameters (twice)
+        image: surrealdb/surrealdb:v2.3.3
+        ports:
+            - 8000:8000
+        restart: unless-stopped
+        volumes:
+            - ./data:/data
+        command:
+            - start
+            - -l=trace
+            - -u=root
+            - -p=root
+            - --allow-scripting
+            - surrealkv://data
