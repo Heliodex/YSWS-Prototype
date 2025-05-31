@@ -1,19 +1,18 @@
-import { CLIENT_ID, CLIENT_SECRET } from "$env/static/private"
+import { cookieSlack } from "$lib/server/auth.js"
+import { slack, slackScopes } from "$lib/server/oauth"
 import { redirect } from "@sveltejs/kit"
-import { Slack, generateState } from "arctic"
+import { generateState } from "arctic"
 
-const scopes = ["openid", "email", "profile"]
-
-export async function GET() {
+export async function GET({ cookies }) {
 	const state = generateState()
+	const url = slack.createAuthorizationURL(state, slackScopes)
 
-	const slack = new Slack(
-		CLIENT_ID,
-		CLIENT_SECRET,
-		"https://localhost:5173/auth"
-	)
+	cookies.set(cookieSlack, state, {
+		path: "/",
+		httpOnly: true,
+		maxAge: 60 * 10,
+		sameSite: "lax",
+	})
 
-	const url = slack.createAuthorizationURL(state, scopes)
-
-	redirect(303, url)
+	redirect(302, url)
 }
