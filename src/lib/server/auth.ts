@@ -4,7 +4,6 @@ import deleteSessionsQuery from "$lib/server/deleteSessions.surql?raw"
 import deleteUserSessionsQuery from "$lib/server/deleteUserSessions.surql?raw"
 import getSessionAndUserQuery from "$lib/server/getSessionAndUser.surql?raw"
 import setSessionQuery from "$lib/server/setSession.surql?raw"
-import type { RecordId } from "@surrealdb/surrealdb"
 
 type SessionValidationResult =
 	| { session: string; user: User }

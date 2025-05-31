@@ -1,6 +1,6 @@
 LET $s = SELECT id, expires FROM ONLY $sess;
 LET $u = (SELECT
-    record::id(id) AS id,
+    record::id(id) AS id
 FROM $sess<-hasSession<-user)[0];
 
 IF $s {
@@ -16,4 +16,3 @@ IF $s {
 	session: IF $s { record::id($s.id) } ELSE { NONE },
 	user: $u,
 };
-
