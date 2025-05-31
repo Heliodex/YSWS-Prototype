@@ -4,6 +4,7 @@ import {
 	cookieSlack,
 	createSession,
 } from "$lib/server/auth"
+import { db, find } from "$lib/server/db.js"
 import { slack } from "$lib/server/oauth"
 
 import { error, redirect } from "@sveltejs/kit"
@@ -33,33 +34,19 @@ export async function GET({ cookies, url }) {
 	}
 
 	let claims: Claims
-
 	try {
 		claims = decodeIdToken(tokens.idToken()) as Claims
-		if (!claims.sub || !claims.name || !claims.email) {
-			error(400, "Invalid ID token claims")
-		}
 	} catch (e) {
 		error(400, "Failed to decode ID token")
 	}
+	if (!claims.sub || !claims.name || !claims.email)
+		error(400, "Invalid ID token claims")
 
-	const slackId = claims.sub
-	const slackName = claims.name
-	const slackEmail = claims.email
+	const id = claims.sub
+	const { name, email } = claims
 
-	const existingUser = await getUserFromSlackId(slackId)
+	if (!(await find("user", id))) await db.create("user", { id, name, email })
 
-	if (existingUser) {
-		cookies.set(
-			cookieName,
-			await createSession(existingUser.id),
-			cookieOptions
-		)
-		redirect(302, "/")
-	}
-
-	const user = await createUser(slackId, slackName)
-
-	cookies.set(cookieName, await createSession(user.id), cookieOptions)
+	cookies.set(cookieName, await createSession(id), cookieOptions)
 	redirect(302, "/")
 }

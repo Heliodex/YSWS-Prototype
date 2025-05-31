@@ -21,8 +21,10 @@ export async function validateSessionToken(
 	return res
 }
 
-export async function createSession(user: RecordId<"user">): Promise<string> {
-	const [, session] = await db.query<string[]>(setSessionQuery, { user })
+export async function createSession(userId: string): Promise<string> {
+	const [, session] = await db.query<string[]>(setSessionQuery, {
+		user: Record("user", userId),
+	})
 	return session
 }
 

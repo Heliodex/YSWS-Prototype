@@ -74,3 +74,20 @@ export const Record = <T extends keyof RecordIdTypes>(
 	table: T,
 	id: RecordIdTypes[T]
 ) => new SurrealRecordId(table, id)
+
+/**
+ * Finds whether a record exists in the database.
+ * @param id The id of the record to find.
+ * @returns Whether the record exists.
+ * @example
+ * await find("user", id)
+ */
+export async function find<T extends keyof RecordIdTypes>(
+	table: T,
+	id: RecordIdTypes[T]
+) {
+	const [result] = await db.query<boolean[]>("!!SELECT 1 FROM $thing", {
+		thing: Record(table, id),
+	})
+	return result
+}
