@@ -18,12 +18,11 @@ type Claims = {
 
 export async function GET({ cookies, url }) {
 	const code = url.searchParams.get("code")
-	if (code === null) error(400, "Missing code")
+	if (!code) error(400, "Missing code")
 	const state = url.searchParams.get("state")
-	if (state === null) error(400, "Missing state")
+	if (!state) error(400, "Missing state")
 	const storedState = cookies.get(cookieSlack)
-	if (storedState === undefined) error(400, "Missing cookie")
-
+	if (!storedState) error(400, "Missing cookie")
 	if (state !== storedState) error(400, "Invalid state")
 
 	let tokens: OAuth2Tokens
