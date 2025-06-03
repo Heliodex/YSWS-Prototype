@@ -17,25 +17,25 @@ Slack and Roblox accounts will be linked to the site with OAuth2, and the Roblox
 Time tracking could be done in a number of ways:
 - Asking the user to record a short video or screenshot of their work
 - VSCode and HackaTime extension, which would allow actual time spend coding to be tracked easily (however most Roblox developers write code in the Roblox Studio IDE instead, which this would not be able to track)
-- An editor plugin could be made for Roblox Studio to track changes (this could be based on the existing [WakaTime for Roblox Studio](https://github.com/wakatime/roblox-studio-wakatime) plugin)
-- The Roblox API could be used after the user updates their place to download the place file and check for changes
+- An editor plugin could be made for Roblox Studio to track changes, this could be based on the existing [WakaTime for Roblox Studio](https://github.com/wakatime/roblox-studio-wakatime) plugin
+- The Roblox API could be used after the user updates their place to download the place file and check for changes manually
 
 ## Prizes
 
 Prizes could be given based on a number of factors:
 - Time spent working on a project
 - For rating projects/having their projects rated highly by other users (like High Seas multipliers)
-- Player count or concurrent users (for example, hitting milestones like 100 visits/10 players)
+- Visits count or concurrent users eg. hitting milestones like 100 visits/10 players
 
 Users could record a video or screenshots of their project, or just submit a link to the game to be played by others.
 
 Prizes could be things like:
 - Stickers
-- Roblox Premium/Robux, the currency of the Roblox ecosystem
+- Roblox Premium/Robux (the currency of the Roblox ecosystem)
 - Listing on a "best projects" section on the website
 - Roblox avatar accessories/merchandise
 
-After conversing with a few developers regarding these prizes, the Robux seems like it could be quite a popular option. Some of the less experienced developers I talked to also said small prizes would be a great incentive for them to further their learning, and Robux could be reinvested into the experience development to spend on promotions/advertising/employing others.
+After conversing with a few developers regarding these prizes, the Robux seems like it could be a popular option. Some of the less experienced developers I talked to also said small prizes would be a great incentive for them to further their learning, and Robux could be reinvested into the experience development to spend on promotions/advertising/employing others. More experienced developers who are likely to spend more time developing may wish to have larger prizes.
 
 These prizes are on top of the payouts already given by Roblox to experience owners for players or asset/product/gamepass sales.
 
