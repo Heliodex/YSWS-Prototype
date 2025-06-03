@@ -29,10 +29,11 @@ Prizes could be given based on a number of factors:
 
 Users could record a video or screenshots of their project, or just submit a link to the game to be played by others.
 
-I don't have many ideas for prizes, but they could be things like:
+Prizes could be things like:
 - Stickers
 - Roblox Premium/Robux, the currency of the Roblox ecosystem
 - Listing on a "best projects" section on the website
+- Roblox avatar accessories/merchandise
 
 After conversing with a few developers regarding these prizes, the Robux seems like it could be quite a popular option. Some of the less experienced developers I talked to also said small prizes would be a great incentive for them to further their learning, and Robux could be reinvested into the experience development to spend on promotions/advertising/employing others.
 
