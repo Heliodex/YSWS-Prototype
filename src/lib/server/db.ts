@@ -6,6 +6,18 @@ import {
 } from "surrealdb"
 import { building } from "$app/environment"
 import initQuery from "$lib/server/init.surql?raw"
+import startSurreal from "$lib/server/process/surreal"
+
+if (!building)
+	try {
+		startSurreal()
+	} catch (e) {
+		console.log(e)
+		console.error(
+			"Failed to start SurrealDB. Make sure it is installed and accessible as `surreal`."
+		)
+		process.exit(1)
+	}
 
 export const db = new Surreal()
 

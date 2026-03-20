@@ -1,5 +1,7 @@
 // See https://svelte.dev/docs/kit/types#app.d.ts
 
+/// <reference types="@types/bun" />
+
 import type { RecordId } from "$lib/server/db"
 
 // for information about these interfaces

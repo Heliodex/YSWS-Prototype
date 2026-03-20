@@ -6,7 +6,7 @@ import {
 	cookieSlack,
 	createSession,
 } from "$lib/server/auth"
-import { db, find } from "$lib/server/db"
+import { db, find, Record, User } from "$lib/server/db"
 import { slack } from "$lib/server/oauth"
 
 type Claims = {
@@ -43,8 +43,14 @@ export async function GET({ cookies, url }) {
 	const id = claims.sub
 	const { name, email } = claims
 
-	if (!(await find("user", id))) await db.create("user", { id, name, email })
+	const rid = Record("user", id)
+	if (!(await find("user", id)))
+		await db.create(User).content({
+			id: rid,
+			name,
+			email,
+		})
 
-	cookies.set(cookieName, await createSession(id), cookieOptions)
+	cookies.set(cookieName, await createSession(rid), cookieOptions)
 	redirect(302, "/")
 }
