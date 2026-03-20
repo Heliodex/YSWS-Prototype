@@ -8,13 +8,13 @@ import type { RecordId } from "$lib/server/db"
 declare global {
 	declare type User = {
 		id: RecordId<"user">
+		name: string
 	}
 
 	namespace App {
-		// interface Error {}
-		// interface Locals {}
-		// interface PageData {}
-		// interface PageState {}
-		// interface Platform {}
+		interface Locals {
+			session: string | null
+			user: User | null
+		}
 	}
 }
