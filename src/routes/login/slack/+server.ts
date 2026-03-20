@@ -27,7 +27,7 @@ export async function GET({ cookies, url }) {
 	let tokens: OAuth2Tokens
 	try {
 		tokens = await slack.validateAuthorizationCode(code)
-	} catch (e) {
+	} catch {
 		error(400, "Invalid code or client credentials")
 	}
 
