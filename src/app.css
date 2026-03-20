@@ -1,1 +1,70 @@
 @import "tailwindcss";
+
+@font-face {
+	font-family: "Builder Sans";
+	font-weight: 400;
+	font-style: normal;
+	src:
+		url(https://cdn.foundation.roblox.com/current/fonts/builder-sans/BuilderSans-Regular.woff2)
+		format("woff2"),
+		url(https://cdn.foundation.roblox.com/current/fonts/builder-sans/BuilderSans-Regular.woff)
+		format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Builder Sans";
+	font-weight: 600;
+	font-style: normal;
+	src:
+		url(https://cdn.foundation.roblox.com/current/fonts/builder-sans/BuilderSans-SemiBold.woff2)
+		format("woff2"),
+		url(https://cdn.foundation.roblox.com/current/fonts/builder-sans/BuilderSans-SemiBold.woff)
+		format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Builder Sans";
+	font-weight: 700;
+	font-style: normal;
+	src:
+		url(https://cdn.foundation.roblox.com/current/fonts/builder-sans/BuilderSans-Bold.woff2)
+		format("woff2"),
+		url(https://cdn.foundation.roblox.com/current/fonts/builder-sans/BuilderSans-Bold.woff)
+		format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Builder Mono";
+	font-weight: 400;
+	font-style: normal;
+	src:
+		url(https://cdn.foundation.roblox.com/current/fonts/builder-mono/BuilderMono-Regular.woff2)
+		format("woff2"),
+		url(https://cdn.foundation.roblox.com/current/fonts/builder-mono/BuilderMono-Regular.woff)
+		format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Builder Extended";
+	font-weight: 700;
+	font-style: normal;
+	src: url(https://cdn.foundation.roblox.com/current/fonts/builder-extended/BuilderExtended-Bold.woff2);
+}
+
+* {
+	font-family: "Builder Sans", sans-serif;
+}
+
+body {
+	background: rgb(17, 18, 22);
+	color: white;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	line-height: 1.5;
+}
