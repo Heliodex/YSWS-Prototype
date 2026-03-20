@@ -15,6 +15,7 @@ The site will allow users to log in with their Hack Club Slack account, then con
 Slack and Roblox accounts will be linked to the site with OAuth2, and the Roblox Open Cloud API will be used to fetch the user's places. Changes submitted will be stored in a database and reviewed to ensure time logged is correct.
 
 Time tracking could be done in a number of ways:
+
 - Asking the user to record a short video or screenshot of their work
 - VSCode and HackaTime extension, which would allow actual time spend coding to be tracked easily (however most Roblox developers write code in the Roblox Studio IDE instead, which this would not be able to track)
 - An editor plugin could be made for Roblox Studio to track changes, this could be based on the existing [WakaTime for Roblox Studio](https://github.com/wakatime/roblox-studio-wakatime) plugin
@@ -23,6 +24,7 @@ Time tracking could be done in a number of ways:
 ## Prizes
 
 Prizes could be given based on a number of factors:
+
 - Time spent working on a project
 - For rating projects/having their projects rated highly by other users (like High Seas multipliers)
 - Visits count or concurrent users eg. hitting milestones like 100 visits/10 players
@@ -30,6 +32,7 @@ Prizes could be given based on a number of factors:
 Users could record a video or screenshots of their project, or just submit a link to the game to be played by others.
 
 Prizes could be things like:
+
 - Stickers
 - Roblox Premium/Robux (the currency of the Roblox ecosystem)
 - Listing on a "best projects" section on the website
