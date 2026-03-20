@@ -1,9 +1,15 @@
+import { redirect } from "@sveltejs/kit"
 import { dev } from "$app/environment"
-import { db, Record } from "$lib/server/db"
+import { db, Record, type RecordId } from "$lib/server/db"
 import deleteSessionsQuery from "$lib/server/deleteSessions.surql?raw"
 import deleteUserSessionsQuery from "$lib/server/deleteUserSessions.surql?raw"
 import getSessionAndUserQuery from "$lib/server/getSessionAndUser.surql?raw"
 import setSessionQuery from "$lib/server/setSession.surql?raw"
+
+export async function createSession(user: RecordId<"user">): Promise<string> {
+	const [, session] = await db.query<string[]>(setSessionQuery, { user })
+	return session
+}
 
 type SessionValidationResult =
 	| { session: string; user: User }
@@ -20,16 +26,9 @@ export async function validateSessionToken(
 	return res
 }
 
-export async function createSession(userId: string): Promise<string> {
-	const [, session] = await db.query<string[]>(setSessionQuery, {
-		user: Record("user", userId),
-	})
-	return session
-}
-
-export async function invalidateSession(session: string): Promise<void> {
+export async function invalidateSession(sessionId: string): Promise<void> {
 	await db.query(deleteSessionsQuery, {
-		sess: Record("session", session),
+		sess: Record("session", sessionId),
 	})
 }
 
@@ -42,9 +41,28 @@ export async function invalidateAllSessions(user: string): Promise<void> {
 export const cookieName = "session"
 export const cookieSlack = "slackstate"
 export const cookieOptions = Object.freeze({
-	httpOnly: true,
-	sameSite: "lax",
 	secure: !dev,
 	maxAge: 30 * 24 * 60 * 60, // 30 days
 	path: "/",
 })
+
+/**
+ * Authorises a user and returns their session and user data, or redirects them to the login page.
+ * @param locals the locals object, containing the user and their session.
+ * @returns An object containing the session and user data. If the authorisation fails, it will redirect the user to /login.
+ * @example
+ * const { session, user } = await authorise(locals)
+ */
+export async function authorise({
+	session,
+	user,
+}: {
+	session: string | null
+	user: User | null
+}) {
+	if (!session || !user)
+		// TODO: get session and user from getRequestEvent() locals
+		redirect(302, "/login")
+
+	return { session, user }
+}

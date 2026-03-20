@@ -70,6 +70,9 @@ type RecordIdTypes = {
 	user: string
 }
 
+export const Session = new Table("session")
+export const User = new Table("user")
+
 // Ensure type safety when creating record ids
 export type RecordId<T extends keyof RecordIdTypes> = SurrealRecordId<T>
 
