@@ -1,14 +1,13 @@
+import { error, redirect } from "@sveltejs/kit"
+import { decodeIdToken, type OAuth2Tokens } from "arctic"
 import {
 	cookieName,
 	cookieOptions,
 	cookieSlack,
 	createSession,
 } from "$lib/server/auth"
-import { db, find } from "$lib/server/db.js"
+import { db, find } from "$lib/server/db"
 import { slack } from "$lib/server/oauth"
-
-import { error, redirect } from "@sveltejs/kit"
-import { type OAuth2Tokens, decodeIdToken } from "arctic"
 
 type Claims = {
 	sub: string

@@ -1,5 +1,3 @@
-import { building } from "$app/environment"
-import initQuery from "$lib/server/init.surql?raw"
 import { error } from "@sveltejs/kit"
 import {
 	type Prettify,
@@ -7,6 +5,8 @@ import {
 	Surreal,
 	RecordId as SurrealRecordId,
 } from "surrealdb"
+import { building } from "$app/environment"
+import initQuery from "$lib/server/init.surql?raw"
 
 export const db = new Surreal()
 

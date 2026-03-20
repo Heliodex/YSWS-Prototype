@@ -1,5 +1,5 @@
 import { dev } from "$app/environment"
-import { Record, db } from "$lib/server/db"
+import { db, Record } from "$lib/server/db"
 import deleteSessionsQuery from "$lib/server/deleteSessions.surql?raw"
 import deleteUserSessionsQuery from "$lib/server/deleteUserSessions.surql?raw"
 import getSessionAndUserQuery from "$lib/server/getSessionAndUser.surql?raw"

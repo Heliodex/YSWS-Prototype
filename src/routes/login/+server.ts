@@ -1,7 +1,7 @@
-import { cookieSlack } from "$lib/server/auth.js"
-import { slack, slackScopes } from "$lib/server/oauth"
 import { redirect } from "@sveltejs/kit"
 import { generateState } from "arctic"
+import { cookieSlack } from "$lib/server/auth"
+import { slack, slackScopes } from "$lib/server/oauth"
 
 export async function GET({ cookies }) {
 	const state = generateState()
