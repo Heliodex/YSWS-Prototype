@@ -10,17 +10,36 @@
 			},
 			"suspicious": {
 				"noEvolvingTypes": "off",
-				"noConsole": "off",
-				"noFallthroughSwitchClause": "off"
+				"noConsole": "off"
 			},
 			"nursery": {
-				"all": true,
-				"useExplicitType": "off",
-				"useConsistentMemberAccessibility": "off",
-				"noSecrets": "off",
-				"noProcessEnv": "off",
-				"noUnknownTypeSelector": "off"
+				"useExplicitType": "off"
+			},
+			"style": {
+				"useLiteralEnumMembers": "error",
+				"useNodejsImportProtocol": "error",
+				"useAsConstAssertion": "error",
+				"useEnumInitializers": "error",
+				"useSelfClosingElements": "error",
+				"useSingleVarDeclarator": "error",
+				"noUnusedTemplateLiteral": "error",
+				"useNumberNamespace": "error",
+				"noInferrableTypes": "error",
+				"useExponentiationOperator": "error",
+				"useTemplate": "error",
+				"noParameterAssign": "error",
+				"noNonNullAssertion": "error",
+				"useDefaultParameterLast": "error",
+				"useImportType": "error",
+				"useExportType": "error",
+				"noUselessElse": "error",
+				"useShorthandFunctionType": "error"
 			}
+		}
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
 		}
 	},
 	"javascript": {
@@ -32,14 +51,22 @@
 	},
 	"overrides": [
 		{
-			"include": ["*.svelte"],
+			"includes": [".svelte-kit/**", "build/**"],
+			"formatter": {
+				"enabled": false
+			}
+		},
+		{
+			"includes": ["**/*.svelte"],
 			"linter": {
 				"rules": {
 					"style": {
 						"useConst": "off"
 					},
 					"correctness": {
-						"noUnusedLabels": "off"
+						"noUnusedLabels": "off",
+						"noUnusedImports": "off",
+						"noUnusedVariables": "off"
 					},
 					"suspicious": {
 						"noConfusingLabels": "off",
@@ -47,6 +74,9 @@
 						"noImplicitAnyLet": "off"
 					}
 				}
+			},
+			"formatter": {
+				"enabled": false
 			}
 		}
 	]
