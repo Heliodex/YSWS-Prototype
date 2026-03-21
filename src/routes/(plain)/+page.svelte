@@ -222,6 +222,52 @@
 		- Listing on a "Best projects" page
 	-->
 
+	<p>
+		There's
+	</p>
+
+	<div class="grid grid-cols-2 gap-4 pt-6">
+		<div class="bg-neutral-800 rounded-lg text-center">
+			<h2 class="py-2">Stickers</h2>
+			<img
+				src="/prizes/stickers.webp"
+				alt="Stickers"
+				class="w-full bg-neutral-700 rounded-b-lg px-12 py-2" />
+		</div>
+		<div class="bg-neutral-800 rounded-lg text-center">
+			<h2 class="py-2">Ad credits</h2>
+			<img
+				src="/prizes/stickers.webp"
+				alt="Ad credits"
+				class="w-full bg-neutral-700 rounded-b-lg px-12 py-2" />
+		</div>
+		<div class="bg-neutral-800 rounded-lg text-center">
+			<h2 class="py-2">Robux & Roblox Premium</h2>
+			<img
+				src="/prizes/robuxpremium.png"
+				alt="Robux"
+				class="rounded-b-lg pt-2" />
+		</div>
+		<div class="bg-neutral-800 rounded-lg text-center">
+			<h2 class="py-2">Virtual Hack Club merch</h2>
+			<img
+				src="/prizes/stickers.webp"
+				alt="Virtual Hack Club merch"
+				class="w-full bg-neutral-700 rounded-b-lg px-12 py-2" />
+		</div>
+		<div class="bg-neutral-800 rounded-lg text-center">
+			<h2 class="py-2">"Best Projects" listing</h2>
+			<img
+				src="/prizes/stickers.webp"
+				alt="Best Projects listing"
+				class="w-full bg-neutral-700 rounded-b-lg px-12 py-2" />
+		</div>
+		<div
+			class="bg-neutral-700 rounded-lg text-center grid place-items-center">
+			<h2 class="py-2">and much more...</h2>
+		</div>
+	</div>
+
 	<h1 class="text-3xl font-bold pt-12 pb-4 text-center">
 		Frequently Asked Questions
 	</h1>
