@@ -1,6 +1,8 @@
 <script lang="ts">
 	import Accordion from "$components/Accordion.svelte"
 	import AccordionItem from "$components/AccordionItem.svelte"
+
+	const name = "OpenBlox"
 </script>
 
 <a href="https://hackclub.com/">
@@ -10,34 +12,170 @@
 		alt="Hack Club" />
 </a>
 
-<div class="mx-auto max-w-250 px-4 py-16">
-	<div class="text-center py-4">
-		<div class="pb-4">
-			<h1 class="text-5xl pb-2">OpenBlox</h1>
-			<span>
+<div id="main" class="mx-auto max-w-200 px-4 py-24">
+	<div class="mx-auto max-w-120 text-center py-8">
+		<div class="pb-8">
+			<!-- coming soon badge -->
+			<span
+				class="badge fadein bg-neutral-600/50 border-1 border-neutral-400 text-white px-3 py-1 rounded-full text-sm font-bold">
+				COMING SOON
+			</span>
+
+			<h1 class="floatin text-6xl">{name}</h1>
+
+			<p class="text-lg">
 				Build a Roblox game in public,
 				<br />
 				track and share your progress,
 				<br />
 				and win prizes for your work!
-			</span>
+			</p>
 		</div>
 
+		<p class="text-balance pb-2 text-sm">
+			{name} is run by
+			<a
+				href="https://hackclub.com"
+				target="_blank"
+				rel="noopener noreferrer">
+				Hack Club,
+			</a>
+			a global community of high school hackers and coders.
+		</p>
+
+		<a
+			href="https://slack.hackclub.com/"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="btn bg-blue-500 hover:bg-blue-600 active:bg-blue-400 px-3 py-1.5 rounded-lg font-bold">
+			Join Hack Club
+		</a>
 		<a
 			href="/login"
-			class="btn bg-blue-500 hover:bg-blue-600 active:bg-blue-400 px-3 py-1.5 rounded-lg">
+			class="btn bg-neutral-700 hover:bg-neutral-800 active:bg-neutral-600 px-3 py-1.5 rounded-lg">
 			Log in with Slack
 		</a>
 	</div>
+	<div class="mx-auto max-w-150 py-8">
+		<!-- disclaimer -->
+		<div
+			class="bg-yellow-500/40 border border-yellow-400 px-4 py-2 rounded-lg">
+			<h2 class="pb-2">Disclaimer</h2>
 
-	<Accordion class="flex flex-col gap-2">
-			<AccordionItem title="test">
-				test
+			<blockquote class="text-xs">
+				While {name} is designed to be fun, it is only a design. Some of
+				this design is complete; some is not. It is not in any sense useful
+				at present, because it does not exist.
+			</blockquote>
+
+			<p class="text-sm pt-2">
+				{name} is vapourware! It is not yet real and none of the information
+				on this page should be taken as fact. This site is a prototype and
+				demonstrates what the event could look like if it were to run.
+			</p>
+		</div>
+	</div>
+
+	<p>
+		{name} is a
+		<a
+			href="https://ysws.hackclub.com"
+			target="_blank"
+			rel="noopener noreferrer">
+			You Ship, We Ship
+		</a>
+		event for you to show off your metaverse development skills. Build (or update
+		an existing) Roblox experience or a development library, and submit it to
+		be rated by others. Make sure to track your progress with regular updates
+		and vote on other projects to earn Tickets. Then, save up your Tickets and
+		exchange them for prizes in the Marketplace!
+	</p>
+
+	<h1 class="text-3xl font-bold pb-4 text-center">Available prizes</h1>
+
+	<!-- 
+		- Stickers
+		- Robux
+		- Roblox Premium
+		- Hack Club-branded avatar accessories
+		- Listing on a "Best projects" page
+	-->
+
+	<h1 class="text-3xl font-bold pb-4 text-center">Frequently Asked Questions</h1>
+
+	<div class="mx-auto max-w-150 pb-8">
+		<Accordion class="flex flex-col gap-4">
+			<AccordionItem title="Who's eligible to join?">
+				The event is intended for high school students. Anyone aged
+				13-18 is eligible to participate. You don't need to be
+				experienced with Roblox development to join.
+				<br />
+				Over 19? Get the same prizes by
+				<a
+					href="https://pyramid.hackclub.com"
+					target="_blank"
+					rel="noopener noreferrer">
+					referring others!
+				</a>
 			</AccordionItem>
-	</Accordion>
+
+			<AccordionItem
+				title="I've never worked with Roblox before, can I still join?">
+				Absolutely! The event is designed to accommodate all skill
+				levels, from complete beginners to experienced developers. We
+				encourage you to learn throughout the event. Many resources are
+				available, such as online tutorials, forums, videos, Roblox's
+				own <a
+					href="https://create.roblox.com/"
+					target="_blank"
+					rel="noopener noreferrer">
+					creator documentation,
+				</a>
+				and our own community!
+			</AccordionItem>
+
+			<AccordionItem
+				title="I'm already experienced with Roblox development, is this event for me?">
+				Yes! You can put as much time and effort as you want into your
+				project and keep earning prizes.
+				<br />
+				In fact there's another option available: you can make a plugin or
+				development library/module to help others build games instead of
+				a game. Perhaps a building plugin, UI library, entity framework,
+				or weapon system. These have slightly different requirements, but
+				are just as valid!
+			</AccordionItem>
+
+			<AccordionItem title="Who runs this?">
+				{name} is sponsored by
+				<a
+					href="https://hackclub.com"
+					target="_blank"
+					rel="noopener noreferrer">
+					Hack Club,
+				</a>
+				a US-based 501(c)(3) non-profit organisation. Hack Club aims to incentivise
+				high schoolers all over the world to learn to code and ship their
+				projects.
+			</AccordionItem>
+		</Accordion>
+	</div>
+
+	<footer class="text-neutral-400 text-sm text-center pt-12">
+		Made with ❤️ and
+		<img class="inline w-7" src="/code.svg" alt="heart" />
+		by Hack Clubbers
+	</footer>
 </div>
 
 <style>
+	#main {
+		background: url("https://assets.create.roblox.com/12822635737186232b19e3fcde6b7bc35683df84/assets/landing/back_drop.webp");
+		background-size: 50rem;
+		background-position: top;
+		background-repeat: no-repeat;
+	}
+
 	img:hover {
 		animation: rotate 1s ease-in-out;
 		animation-iteration-count: 2;

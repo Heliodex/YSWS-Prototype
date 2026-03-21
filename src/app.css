@@ -70,11 +70,45 @@ body {
 }
 
 .btn {
-	@apply cursor-pointer transition-colors font-bold;
+	@apply cursor-pointer transition-colors;
+}
+
+blockquote {
+	@apply border-l-2 border-white/70 pl-2 italic text-white/70;
+}
+
+.fadein {
+	animation: fadein 1s ease-out;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.floatin {
+	animation: floatin 0.7s ease-in-out, fadein 1s ease-out;
+}
+
+@keyframes floatin {
+	from {
+		transform: translateY(10px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+h1, .badge {
+	font-family: "Builder Extended", sans-serif;
 }
 
 h1 {
-	font-family: "Builder Extended", sans-serif;
+	@apply py-2;
 }
 
 h2 {
@@ -87,4 +121,8 @@ h3 {
 
 h4 {
 	@apply font-semibold text-base;
+}
+
+p a {
+	@apply text-blue-400 hover:text-blue-300 transition-colors;
 }
