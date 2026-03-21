@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Accordion from "$components/Accordion.svelte"
 	import AccordionItem from "$components/AccordionItem.svelte"
+	import Login from "$components/Login.svelte"
 
 	const name = "OpenBlox"
 </script>
@@ -18,7 +19,7 @@
 		<div class="pb-8">
 			<!-- coming soon badge -->
 			<span
-				class="badge fadein bg-neutral-600/50 border-1 border-neutral-400 text-white px-3 py-1 rounded-full text-sm">
+				class="badge fadein bg-neutral-600/50 border border-neutral-400 text-white px-3 py-1 rounded-full text-sm">
 				COMING SOON
 			</span>
 
@@ -37,7 +38,7 @@
 			</p>
 		</div>
 
-		<p class="text-balance pb-2 text-sm">
+		<p class="text-balance pb-4 text-sm">
 			{name} is run by
 			<a
 				href="https://hackclub.com"
@@ -48,18 +49,7 @@
 			a global community of high school hackers and coders.
 		</p>
 
-		<a
-			href="https://slack.hackclub.com/"
-			target="_blank"
-			rel="noopener noreferrer"
-			class="btn bg-blue-500 hover:bg-blue-600 active:bg-blue-400 px-3 py-1.5 rounded-lg font-bold">
-			Join Hack Club
-		</a>
-		<a
-			href="/login"
-			class="btn bg-neutral-700 hover:bg-neutral-800 active:bg-neutral-600 px-3 py-1.5 rounded-lg">
-			Log in with Slack
-		</a>
+		<Login />
 	</div>
 	<div class="mx-auto max-w-150 py-8">
 		<!-- disclaimer -->
@@ -102,31 +92,99 @@
 		<ol>
 			<li>
 				<div>
-					If you're not already a member of Hack Club, sign up and
-					create an account on Slack. If you're already a Hack Club
-					member, sign in with Slack to access the dashboard.
+					<p class="pb-4">
+						If you're not already a member of Hack Club, sign up and
+						create an account on Slack. If you're already a Hack
+						Club member, sign in with Slack to access the dashboard.
+					</p>
+
+					<img
+						src="/dashboard.png"
+						alt="Dashboard"
+						class="rounded-lg border-4 border-neutral-700" />
 				</div>
 			</li>
 
 			<li>
 				<div>
-					Once you have your idea, create a project from the dashboard
-					&ndash; select the type of project and input your project
-					title, type, links, screenshots, and a short description.
-					Your project can be an update to an existing experience, or
-					be part of a team effort.
+					<p>
+						Once you have your idea, create a project from the
+						dashboard. Next, select the type of project and input
+						your project title, type, links, screenshots, and a
+						short description. Your project can be an update to an
+						existing experience, be part of a team effort, or be
+						made partially by generative AI like the Roblox
+						Assistant &ndash; as long as you declare these details
+						in your project creation form.
+					</p>
 				</div>
 			</li>
 
 			<li>
-				<div>yeah</div>
+				<div>
+					<p>
+						Now it's time to open
+						<a
+							href="https://create.roblox.com/docs/studio/setup"
+							target="_blank"
+							rel="noopener noreferrer">
+							Roblox Studio
+						</a>
+						and start building! As you work on your project, track your
+						time at regular intervals with screenshots and descriptions
+						of your progress.
+					</p>
+					<p class="pt-4">
+						There are 2 choices for how to track your progress. Pick
+						whichever one works best for you, or a combination of
+						both for different parts of your workflow:
+					</p>
+
+					<div class="flex w-full gap-4 pt-4">
+						<div class="bg-neutral-700 rounded-lg px-4 py-2 w-1/2">
+							Screen recording with
+							<a
+								href="https://lapse.hackclub.com"
+								target="_blank"
+								rel="noopener noreferrer">
+								Lapse,
+							</a>
+							tracking time spent in Studo or in an external editor.
+							The screen recording will be compressed and stored as
+							a sped-up timelapse video.
+
+							<div class="py-2">
+								<img
+									src="/studio.png"
+									alt="Roblox Studio"
+									class="border border-red-500 rounded-md" />
+							</div>
+						</div>
+						<div class="bg-neutral-700 rounded-lg px-4 py-2 w-1/2">
+							Hour recording with Hack Hour, a Slack bot to notify
+							before and during a work session.
+
+							<div class="py-2">
+								<img
+									src="/hack-hour.png"
+									alt="Hack Hour"
+									class="rounded-md" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div>
+					<p>After</p>
+				</div>
 			</li>
 		</ol>
 	</div>
 
 	<h1 class="text-3xl font-bold pt-8 pb-4 text-center">Available prizes</h1>
 
-	<!-- 
+	<!--
 		- Stickers
 		- Robux
 		- Roblox Premium
@@ -188,6 +246,19 @@
 				are just as valid!
 			</AccordionItem>
 
+			<AccordionItem
+				title="Can I use an alternative editor instead of Roblox Studio?">
+				Yes, with Roblox Studio's <a
+					href="https://create.roblox.com/docs/scripting/sync"
+					target="_blank"
+					rel="noopener noreferrer">
+					Script Sync system,
+				</a>
+				you can use an external code editor to write your code and synchronise
+				it to Roblox, though you'll still need to use Roblox Studio to build
+				your game world and test your project.
+			</AccordionItem>
+
 			<AccordionItem title="Who runs this?">
 				{name} is sponsored by
 				<a
@@ -197,10 +268,21 @@
 					Hack Club,
 				</a>
 				a US-based 501(c)(3) non-profit organisation. Hack Club aims to incentivise
-				high schoolers all over the world to learn to code and ship their
-				projects.
+				high schoolers all over the world to advance their programming skills
+				and ship their projects.
 			</AccordionItem>
 		</Accordion>
+	</div>
+
+	<div class="mx-auto max-w-120 text-center py-8">
+		<h2>Still have questions?</h2>
+
+		<p class="pb-4 text-balance">
+			Join our channel on the Hack Club Slack to ask questions and chat
+			with other participants!
+		</p>
+
+		<Login />
 	</div>
 
 	<footer class="text-neutral-400 text-sm text-center pt-12">
@@ -222,7 +304,7 @@
 
 <style>
 	#main {
-		background: url(https://assets.create.roblox.com/12822635737186232b19e3fcde6b7bc35683df84/assets/landing/back_drop.webp);
+		background: url(/back_drop.webp);
 		background-size: 50rem;
 		background-position: top;
 		background-repeat: no-repeat;
