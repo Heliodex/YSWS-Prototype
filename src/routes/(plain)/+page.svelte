@@ -7,6 +7,7 @@
 
 <a href="https://hackclub.com/">
 	<img
+		id="hc"
 		class="absolute top-0 left-8 border-0 w-32 z-999"
 		src="https://assets.hackclub.com/flag-orpheus-top.svg"
 		alt="Hack Club" />
@@ -17,11 +18,15 @@
 		<div class="pb-8">
 			<!-- coming soon badge -->
 			<span
-				class="badge fadein bg-neutral-600/50 border-1 border-neutral-400 text-white px-3 py-1 rounded-full text-sm font-bold">
+				class="badge fadein bg-neutral-600/50 border-1 border-neutral-400 text-white px-3 py-1 rounded-full text-sm">
 				COMING SOON
 			</span>
 
-			<h1 class="floatin text-6xl">{name}</h1>
+			<h1 class="floatin text-6xl pt-4 pb-2">{name}</h1>
+
+			<div class="text-xl font-semibold pb-4">
+				22 June 2026 - 16 July 2026
+			</div>
 
 			<p class="text-lg">
 				Build a Roblox game in public,
@@ -84,14 +89,42 @@
 			rel="noopener noreferrer">
 			You Ship, We Ship
 		</a>
-		event for you to show off your metaverse development skills. Build (or update
-		an existing) Roblox experience or a development library, and submit it to
-		be rated by others. Make sure to track your progress with regular updates
+		programme for you to show off your metaverse development skills. Build (or
+		update an existing) Roblox experience or a development library, and submit
+		it to be rated by others. Make sure to track your progress with regular updates
 		and vote on other projects to earn Tickets. Then, save up your Tickets and
 		exchange them for prizes in the Marketplace!
 	</p>
 
-	<h1 class="text-3xl font-bold pb-4 text-center">Available prizes</h1>
+	<div id="how">
+		<h1 class="text-3xl font-bold pt-8 pb-4 text-center">How it works</h1>
+
+		<ol>
+			<li>
+				<div>
+					If you're not already a member of Hack Club, sign up and
+					create an account on Slack. If you're already a Hack Club
+					member, sign in with Slack to access the dashboard.
+				</div>
+			</li>
+
+			<li>
+				<div>
+					Once you have your idea, create a project from the dashboard
+					&ndash; select the type of project and input your project
+					title, type, links, screenshots, and a short description.
+					Your project can be an update to an existing experience, or
+					be part of a team effort.
+				</div>
+			</li>
+
+			<li>
+				<div>yeah</div>
+			</li>
+		</ol>
+	</div>
+
+	<h1 class="text-3xl font-bold pt-8 pb-4 text-center">Available prizes</h1>
 
 	<!-- 
 		- Stickers
@@ -101,7 +134,9 @@
 		- Listing on a "Best projects" page
 	-->
 
-	<h1 class="text-3xl font-bold pb-4 text-center">Frequently Asked Questions</h1>
+	<h1 class="text-3xl font-bold pt-8 pb-4 text-center">
+		Frequently Asked Questions
+	</h1>
 
 	<div class="mx-auto max-w-150 pb-8">
 		<Accordion class="flex flex-col gap-4">
@@ -117,6 +152,13 @@
 					rel="noopener noreferrer">
 					referring others!
 				</a>
+			</AccordionItem>
+
+			<AccordionItem title="How much does it cost to join in?">
+				{name} is completely free to join and participate in. All prizes
+				are provided by us. If shipping is required for a prize, we will
+				cover the cost of shipping, however customs fees may apply for international
+				participants.
 			</AccordionItem>
 
 			<AccordionItem
@@ -162,22 +204,39 @@
 	</div>
 
 	<footer class="text-neutral-400 text-sm text-center pt-12">
-		Made with ❤️ and
-		<img class="inline w-7" src="/code.svg" alt="heart" />
-		by Hack Clubbers
+		<a
+			href="https://create.roblox.com/"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="pb-4 flex flex-col">
+			<img class="h-15" src="/RobloxBadge.svg" alt="Now on Roblox" />
+		</a>
+
+		<p>
+			Made with ❤️ and
+			<img class="inline w-7" src="/code.svg" alt="code" />
+			by Hack Clubbers
+		</p>
 	</footer>
 </div>
 
 <style>
 	#main {
-		background: url("https://assets.create.roblox.com/12822635737186232b19e3fcde6b7bc35683df84/assets/landing/back_drop.webp");
+		background: url(https://assets.create.roblox.com/12822635737186232b19e3fcde6b7bc35683df84/assets/landing/back_drop.webp);
 		background-size: 50rem;
 		background-position: top;
 		background-repeat: no-repeat;
 	}
 
-	img:hover {
-		animation: rotate 1s ease-in-out;
+	#how {
+		background: url(/grid.svg);
+		background-size: 50rem;
+		background-position: top;
+		background-repeat: no-repeat;
+	}
+
+	#hc:hover {
+		animation: rotate 0.75s ease-in-out;
 		animation-iteration-count: 2;
 	}
 

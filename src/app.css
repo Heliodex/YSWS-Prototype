@@ -91,7 +91,9 @@ blockquote {
 }
 
 .floatin {
-	animation: floatin 0.7s ease-in-out, fadein 1s ease-out;
+	animation:
+		floatin 0.7s ease-in-out,
+		fadein 1s ease-out;
 }
 
 @keyframes floatin {
@@ -103,12 +105,9 @@ blockquote {
 	}
 }
 
-h1, .badge {
+h1,
+.badge {
 	font-family: "Builder Extended", sans-serif;
-}
-
-h1 {
-	@apply py-2;
 }
 
 h2 {
@@ -125,4 +124,25 @@ h4 {
 
 p a {
 	@apply text-blue-400 hover:text-blue-300 transition-colors;
+}
+
+/* add number to li */
+ol {
+	counter-reset: li;
+	& li {
+		counter-increment: li;
+		@apply pb-8;
+		& div {
+			@apply pl-12;
+		}
+	}
+	& li::before {
+		font-family: "Builder Extended", sans-serif;
+		font-size: 1.5rem;
+		content: "Step " counter(li) "";
+		display: inline-block;
+		width: fit-content;
+
+		@apply bg-neutral-600/25 border border-neutral-500 text-white px-2 rounded-lg rotate-[-10deg];
+	}
 }
