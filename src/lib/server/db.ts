@@ -43,7 +43,7 @@ db.query = async <R extends unknown[]>(
 
 export const version = db.version.bind(db)
 
-const url = new URL("ws://localhost:8000") // must be ws:// to prevent token expiration, http:// will expire after 1 hour by default
+const url = new URL("ws://localhost:8001") // must be ws:// to prevent token expiration, http:// will expire after 1 hour by default
 
 async function reconnect() {
 	for (let attempt = 0; ; attempt++)
