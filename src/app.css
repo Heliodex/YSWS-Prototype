@@ -72,3 +72,19 @@ body {
 .btn {
 	@apply cursor-pointer transition-colors font-bold;
 }
+
+h1 {
+	font-family: "Builder Extended", sans-serif;
+}
+
+h2 {
+	@apply font-semibold text-xl;
+}
+
+h3 {
+	@apply font-semibold text-lg;
+}
+
+h4 {
+	@apply font-semibold text-base;
+}
