@@ -5,5 +5,5 @@ export const slackScopes = ["openid", "email", "profile"]
 export const slack = new Slack(
 	SLACK_CLIENT_ID,
 	SLACK_SECRET,
-	"https://localhost:5173/login/slack"
+	"https://ysws.heliodex.cf/login/slack"
 )
