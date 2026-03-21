@@ -157,11 +157,12 @@ form fieldset {
 	}
 
 	/* apply to label next to required inputs */
-	&:has(input[required]) label::after {
-		content: " *";
+	&:has(input[required]) label::after,
+	&:has(select[required]) label::after {
+		content: "*";
 		@apply text-red-500;
 	}
-	&:not(:has(input[required])) label::after {
+	&:not(:has(input[required])):not(:has(select[required])) label::after {
 		content: " (optional)";
 		@apply text-sm text-neutral-400;
 	}

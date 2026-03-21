@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { enhance } from "$app/forms"
+	import { newProjectForm } from "./new.remote"
 
 	const name = "OpenBlox"
 </script>
@@ -7,7 +7,7 @@
 <div id="main" class="mx-auto max-w-150 px-4 py-8">
 	<h1 class="text-2xl">New project</h1>
 
-	<form use:enhance method="post" class="pt-8">
+	<form {...newProjectForm} enctype="multipart/form-data" class="pt-8">
 		<fieldset>
 			<label for="image">Project image</label>
 			<input type="file" name="image" id="image" accept="image/*" />
@@ -59,7 +59,12 @@
 		<fieldset>
 			<label for="declarations">Declarations</label>
 			<select name="declarations" id="declarations" multiple>
-				<option value="ai">Used AI</option>
+				<option value="scriptingAI">
+					Used generative AI for scripting
+				</option>
+				<option value="buildingAI">
+					Used generative AI for building/modelling
+				</option>
 				<option value="team">Team project</option>
 			</select>
 			<small>Select as many as you feel apply.</small>
