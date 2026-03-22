@@ -149,7 +149,7 @@
 						both for different parts of your workflow:
 					</p>
 
-					<div class="grid sm:grid-cols-2 gap-4 pt-4">
+					<div class="grid sm:grid-cols-[11fr_9fr] gap-4 pt-4">
 						<div
 							class="bg-neutral-700 border-4 border-neutral-700 hover:border-neutral-500 transition-colors rounded-lg px-3 py-1">
 							Screen recording with
@@ -161,7 +161,7 @@
 							</a>
 							tracking time spent in Studo or in an external editor.
 							The screen recording will be compressed and stored as
-							a sped-up timelapse video.
+							a sped-up timelapse video for sharing (if you want to) and review.
 
 							<div class="py-2">
 								<img
@@ -294,7 +294,7 @@
 			Frequently Asked Questions
 		</h1>
 
-		<div class="mx-auto max-w-150 pb-8">
+		<div id="faqbox" class="mx-auto max-w-150 pb-8">
 			<Accordion class="flex flex-col gap-4">
 				<AccordionItem title="Who's eligible to join?">
 					The event is intended for high school students of any

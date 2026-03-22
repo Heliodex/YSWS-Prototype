@@ -255,12 +255,13 @@ details:hover:not([open]) {
 	background-size: contain;
 }
 
-#faq::before {
+/* @media (width > 960px) { */
+#faqbox::before {
 	content: "";
 	position: absolute;
 
-	margin-left: 4rem;
-	margin-top: 6rem;
+	margin-left: -7.5rem;
+	margin-top: -0.5rem;
 
 	width: 5rem;
 	height: 30rem;
@@ -271,12 +272,12 @@ details:hover:not([open]) {
 	transform: scaleX(-1);
 }
 
-#faq::after {
+#faqbox::after {
 	content: "";
 	position: absolute;
 
-	margin-left: 51rem;
-	margin-top: -26rem;
+	margin-left: 39.5rem;
+	margin-top: -23rem;
 
 	width: 5rem;
 	height: 24rem;
@@ -285,3 +286,4 @@ details:hover:not([open]) {
 
 	transform: scaleX(-1);
 }
+/* } */
