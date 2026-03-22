@@ -430,7 +430,7 @@
 	}
 
 	#how {
-		background: url(/grid.png);
+		background: url(/grid.svg);
 		background-size: 50rem;
 		background-position: top;
 		background-repeat: no-repeat;
