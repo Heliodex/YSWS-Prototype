@@ -223,40 +223,47 @@
 	-->
 
 	<p>
-		There's
+		There's a variety of prizes to be won, and more will be added as the
+		event goes on. Some of it is cool swag, some are resources to help you
+		make your experience even better, and some are just for fun.
 	</p>
 
 	<div class="grid grid-cols-2 gap-4 pt-6">
-		<div class="bg-neutral-800 rounded-lg text-center">
+		<div
+			class="bg-neutral-800 rounded-lg text-center flex flex-col justify-between">
 			<h2 class="py-2">Stickers</h2>
 			<img
 				src="/prizes/stickers.webp"
 				alt="Stickers"
 				class="w-full bg-neutral-700 rounded-b-lg px-12 py-2" />
 		</div>
-		<div class="bg-neutral-800 rounded-lg text-center">
+		<div
+			class="bg-neutral-800 rounded-lg text-center flex flex-col justify-between">
 			<h2 class="py-2">Ad credits</h2>
 			<img
-				src="/prizes/stickers.webp"
+				src="/prizes/adcredits.png"
 				alt="Ad credits"
-				class="w-full bg-neutral-700 rounded-b-lg px-12 py-2" />
+				class="w-full bg-neutral-700 rounded-b-lg" />
 		</div>
-		<div class="bg-neutral-800 rounded-lg text-center">
+		<div
+			class="bg-neutral-800 rounded-lg text-center flex flex-col justify-between">
 			<h2 class="py-2">Robux & Roblox Premium</h2>
 			<img
 				src="/prizes/robuxpremium.png"
 				alt="Robux"
-				class="rounded-b-lg pt-2" />
+				class="rounded-b-lg" />
 		</div>
-		<div class="bg-neutral-800 rounded-lg text-center">
+		<div
+			class="bg-neutral-800 rounded-lg text-center flex flex-col justify-between">
 			<h2 class="py-2">Virtual Hack Club merch</h2>
 			<img
-				src="/prizes/stickers.webp"
+				src="/prizes/merch.png"
 				alt="Virtual Hack Club merch"
-				class="w-full bg-neutral-700 rounded-b-lg px-12 py-2" />
+				class="w-full rounded-b-lg" />
 		</div>
-		<div class="bg-neutral-800 rounded-lg text-center">
-			<h2 class="py-2">"Best Projects" listing</h2>
+		<div
+			class="bg-neutral-800 rounded-lg text-center flex flex-col justify-between">
+			<h2 class="py-2">"Best projects" page listing</h2>
 			<img
 				src="/prizes/stickers.webp"
 				alt="Best Projects listing"
@@ -268,105 +275,109 @@
 		</div>
 	</div>
 
-	<h1 class="text-3xl font-bold pt-12 pb-4 text-center">
-		Frequently Asked Questions
-	</h1>
+	<div id="faq">
+		<h1 class="text-3xl font-bold pt-12 pb-4 text-center">
+			Frequently Asked Questions
+		</h1>
 
-	<div class="mx-auto max-w-150 pb-8">
-		<Accordion class="flex flex-col gap-4">
-			<AccordionItem title="Who's eligible to join?">
-				The event is intended for high school students of any experience
-				level. Anyone aged 13-18 is eligible to participate. You don't
-				need to be experienced with Roblox development to join.
-				<br />
-				19 or over? Get the same prizes by
-				<a
-					href="https://pyramid.hackclub.com"
-					target="_blank"
-					rel="noopener noreferrer">
-					referring others!
-				</a>
-			</AccordionItem>
+		<div class="mx-auto max-w-150 pb-8">
+			<Accordion class="flex flex-col gap-4">
+				<AccordionItem title="Who's eligible to join?">
+					The event is intended for high school students of any
+					experience level. Anyone aged 13-18 is eligible to
+					participate. You don't need to be experienced with Roblox
+					development to join.
+					<br />
+					19 or over? Get the same prizes by
+					<a
+						href="https://pyramid.hackclub.com"
+						target="_blank"
+						rel="noopener noreferrer">
+						referring others!
+					</a>
+				</AccordionItem>
 
-			<AccordionItem title="How much does it cost to join in?">
-				{name} is completely free to join and participate in. All prizes
-				are provided by us. If shipping is required for a prize, we will
-				cover the cost of shipping, however customs fees may apply for international
-				participants.
-			</AccordionItem>
+				<AccordionItem title="How much does it cost to join in?">
+					{name} is completely free to join and participate in. All prizes
+					are provided by us. If shipping is required for a prize, we will
+					cover the cost of shipping, however customs fees may apply for
+					international participants.
+				</AccordionItem>
 
-			<AccordionItem
-				title="I've never worked with Roblox before, can I still join?">
-				Absolutely! The event is designed to accommodate all skill
-				levels, from complete beginners to experienced developers. We
-				encourage you to learn throughout the event. Many resources are
-				available, such as online tutorials, forums, videos, Roblox's
-				own <a
-					href="https://create.roblox.com/"
-					target="_blank"
-					rel="noopener noreferrer">
-					creator documentation,
-				</a>
-				and our own community!
-			</AccordionItem>
+				<AccordionItem
+					title="I've never worked with Roblox before, can I still join?">
+					Absolutely! The event is designed to accommodate all skill
+					levels, from complete beginners to experienced developers.
+					We encourage you to learn throughout the event. Many
+					resources are available, such as online tutorials, forums,
+					videos, Roblox's own <a
+						href="https://create.roblox.com/"
+						target="_blank"
+						rel="noopener noreferrer">
+						creator documentation,
+					</a>
+					and our own community!
+				</AccordionItem>
 
-			<AccordionItem
-				title="I'm already experienced with Roblox development, is this event for me?">
-				Yes! You can put as much time and effort as you want into your
-				project and keep earning prizes.
-				<br />
-				<br />
-				In fact there's another option available: you can make a plugin or
-				development library/module to help others build experiences instead
-				of a game. Perhaps a building plugin, UI library, entity framework,
-				or weapon system. These have slightly different requirements, though
-				are just as valid!
-			</AccordionItem>
+				<AccordionItem
+					title="I'm already experienced with Roblox development, is this event for me?">
+					Yes! You can put as much time and effort as you want into
+					your project and keep earning prizes.
+					<br />
+					<br />
+					In fact there's another option available: you can make a plugin
+					or development library/module to help others build experiences
+					instead of a game. Perhaps a building plugin, UI library, entity
+					framework, or weapon system. These have slightly different requirements,
+					though are just as valid!
+				</AccordionItem>
 
-			<AccordionItem
-				title="Can I use an alternative editor instead of Roblox Studio?">
-				Yes, with Roblox Studio's <a
-					href="https://create.roblox.com/docs/scripting/sync"
-					target="_blank"
-					rel="noopener noreferrer">
-					Script Sync system,
-				</a>
-				you can use an external code editor to write your code and synchronise
-				it to Roblox, though you'll still need to use Roblox Studio to build
-				your game world and test your project.
-			</AccordionItem>
+				<AccordionItem
+					title="Can I use an alternative editor instead of Roblox Studio?">
+					Yes, with Roblox Studio's <a
+						href="https://create.roblox.com/docs/scripting/sync"
+						target="_blank"
+						rel="noopener noreferrer">
+						Script Sync system,
+					</a>
+					you can use an external code editor to write your code and synchronise
+					it to Roblox, though you'll still need to use Roblox Studio to
+					build your game world and test your project.
+				</AccordionItem>
 
-			<AccordionItem
-				title="Roblox Studio isn't available on my platform!">
-				Check out <a
-					href="https://vinegarhq.org/"
-					target="_blank"
-					rel="noopener noreferrer">
-					Vinegar.
-				</a>
-				It's a compatibility layer to allow Roblox Studio to run on Linux.
-				We've found it to be stable enough to develop and review projcets
-				with.
-			</AccordionItem>
+				<AccordionItem
+					title="Roblox Studio isn't available on my platform!">
+					Check out <a
+						href="https://vinegarhq.org/"
+						target="_blank"
+						rel="noopener noreferrer">
+						Vinegar.
+					</a>
+					It's a compatibility layer to allow Roblox Studio to run on Linux.
+					We've found it to be stable enough to develop and review projcets
+					with.
+				</AccordionItem>
 
-			<AccordionItem title="Who runs this?">
-				{name} is sponsored by
-				<a
-					href="https://hackclub.com"
-					target="_blank"
-					rel="noopener noreferrer">
-					Hack Club,
-				</a>
-				a US-based 501(c)(3) non-profit organisation. Hack Club aims to incentivise
-				high schoolers all over the world to advance their programming skills
-				and ship their projects.
-				<br />
-				<br />
-				We think you learn best when you're building, so we provide the useful
-				resources and the amazing community to help you do that. We make,
-				break, learn, and share projects together. Welcome to the club!
-			</AccordionItem>
-		</Accordion>
+				<AccordionItem title="Who runs this?">
+					{name} is sponsored by
+					<a
+						href="https://hackclub.com"
+						target="_blank"
+						rel="noopener noreferrer">
+						Hack Club,
+					</a>
+					a US-based 501(c)(3) non-profit organisation. Hack Club aims
+					to incentivise high schoolers all over the world to advance their
+					programming skills and ship their projects.
+					<br />
+					<br />
+					We think you learn best when you're building, so we provide the
+					useful resources and the amazing community to help you do that.
+					We make, break, learn, and share projects together. Welcome to
+					the club!
+				</AccordionItem>
+			</Accordion>
+		</div>
 	</div>
 
 	<div class="mx-auto max-w-120 text-center py-8">
@@ -392,8 +403,21 @@
 		<p>
 			Made with ❤️ and
 			<img class="inline w-7" src="/code.svg" alt="code" />
-			by Hack Clubbers
+			by Hack Clubbers. {name} is not affiliated with Roblox Corporation.
 		</p>
+		<a
+			href="https://github.com/Heliodex/YSWS-Prototype"
+			target="_blank"
+			rel="noopener noreferrer">
+			Source code
+		</a>
+		|
+		<a
+			href="https://hackclub.com/philanthropy/"
+			target="_blank"
+			rel="noopener noreferrer">
+			Donate
+		</a>
 	</footer>
 </div>
 
@@ -406,7 +430,14 @@
 	}
 
 	#how {
-		background: url(/grid.svg);
+		background: url(/grid.png);
+		background-size: 50rem;
+		background-position: top;
+		background-repeat: no-repeat;
+	}
+
+	#faq {
+		background: url(/grid2.png);
 		background-size: 50rem;
 		background-position: top;
 		background-repeat: no-repeat;
