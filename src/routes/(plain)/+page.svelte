@@ -149,8 +149,9 @@
 						both for different parts of your workflow:
 					</p>
 
-					<div class="flex w-full gap-4 pt-4">
-						<div class="bg-neutral-700 rounded-lg px-4 py-2 w-1/2">
+					<div class="grid grid-cols-2 gap-4 pt-4">
+						<div
+							class="bg-neutral-700 border-4 border-neutral-700 hover:border-neutral-500 transition-colors rounded-lg px-3 py-1">
 							Screen recording with
 							<a
 								href="https://lapse.hackclub.com"
@@ -169,7 +170,8 @@
 									class="border border-red-500 rounded-md" />
 							</div>
 						</div>
-						<div class="bg-neutral-700 rounded-lg px-4 py-2 w-1/2">
+						<div
+							class="bg-neutral-700 border-4 border-neutral-700 hover:border-neutral-500 transition-colors rounded-lg px-3 py-1">
 							Hour recording with Hack Hour, a Slack bot to notify
 							before and during a work session.
 
@@ -366,7 +368,7 @@
 						Vinegar.
 					</a>
 					It's a compatibility layer to allow Roblox Studio to run on Linux.
-					We've found it to be stable enough to develop and review projcets
+					We've found it to be stable enough to develop and review projects
 					with.
 				</AccordionItem>
 
