@@ -9,7 +9,7 @@ const schema = type({
 	codeUrl: "(string | undefined)?",
 	robloxUrl: "string",
 	projectType: "string",
-	declarations: "string",
+	declarations: "(string | undefined)?",
 	reviewerNotes: "(string | undefined)?",
 })
 
