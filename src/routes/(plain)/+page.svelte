@@ -105,7 +105,7 @@
 					<img
 						src="/dashboard.png"
 						alt="Dashboard page"
-						class="rounded-lg border-4 border-neutral-700 opacity-90 rotate-2 hover:rotate-1 hover:scale-102 transition-transform shadow-xl shadow-black" />
+						class="rounded-lg border-4 border-neutral-700 opacity-90 rotate-2 hover:rotate-1 hover:scale-102 transition-transform shadow-xl hover:shadow-2xl shadow-black" />
 				</div>
 			</li>
 
@@ -125,7 +125,7 @@
 					<img
 						src="/new.png"
 						alt="New project page"
-						class="rounded-lg border-4 border-neutral-700 opacity-90 -rotate-2 hover:-rotate-1 hover:scale-102 transition-transform shadow-xl shadow-black" />
+						class="rounded-lg border-4 border-neutral-700 opacity-90 -rotate-2 hover:-rotate-1 hover:scale-102 transition-transform shadow-xl hover:shadow-2xl shadow-black" />
 				</div>
 			</li>
 
@@ -151,7 +151,7 @@
 
 					<div class="grid sm:grid-cols-[11fr_9fr] gap-4 pt-4">
 						<div
-							class="bg-neutral-700 border-4 border-neutral-700 hover:border-neutral-500 transition-colors rounded-lg px-3 py-1">
+							class="bg-neutral-700 border-4 border-neutral-700 hover:border-neutral-500 transition-all rounded-lg px-3 py-1 hover:transform-[perspective(800px)_rotateY(5deg)]">
 							Screen recording with
 							<a
 								href="https://lapse.hackclub.com"
@@ -161,7 +161,8 @@
 							</a>
 							tracking time spent in Studo or in an external editor.
 							The screen recording will be compressed and stored as
-							a sped-up timelapse video for sharing (if you want to) and review.
+							a sped-up timelapse video for sharing (if you want to)
+							and review.
 
 							<div class="py-2">
 								<img
@@ -171,7 +172,7 @@
 							</div>
 						</div>
 						<div
-							class="bg-neutral-700 border-4 border-neutral-700 hover:border-neutral-500 transition-colors rounded-lg px-3 py-1">
+							class="bg-neutral-700 border-4 border-neutral-700 hover:border-neutral-500 transition-all rounded-lg px-3 py-1 hover:transform-[perspective(800px)_rotateY(-5deg)]">
 							Hour recording with Hack Hour, a Slack bot to notify
 							before and during a work session.
 
