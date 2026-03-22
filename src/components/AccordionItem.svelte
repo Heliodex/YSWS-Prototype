@@ -10,7 +10,7 @@
 	} = $props()
 </script>
 
-<details name="details" class="bg-neutral-700 rounded-lg">
+<details name="details" class="bg-neutral-700 transition-colors rounded-lg">
 	<summary class="p-2 px-4 block cursor-pointer">
 		{title}
 	</summary>

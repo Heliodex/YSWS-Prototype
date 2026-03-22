@@ -14,7 +14,7 @@
 		alt="Hack Club" />
 </a>
 
-<div id="main" class="mx-auto max-w-200 px-4 py-24">
+<div id="main" class="mx-auto max-w-200 px-4 pt-24">
 	<div class="mx-auto max-w-120 text-center py-8">
 		<div class="pb-8">
 			<!-- coming soon badge -->
@@ -83,8 +83,11 @@
 		programme for you to show off your metaverse development skills. Build (or
 		update an existing) Roblox experience or a development library, and submit
 		it to be rated by others. Make sure to track your progress with regular updates
-		and vote on other projects to earn Tickets. Then, save up your Tickets and
-		exchange them for prizes in the Marketplace!
+		and vote on other projects to earn
+		<span class="tix">Tickets.</span>
+		Then, save up your
+		<span class="tix">Tickets</span>
+		and exchange them for prizes in the Marketplace!
 	</p>
 
 	<div id="how">
@@ -190,22 +193,26 @@
 					</p>
 					<p>
 						During this time, you can also vote on other projects to
-						earn Tickets and help your fellow developers earn them
-						too! Each voting match-up will give you 3 random
-						projects, which you need to test, rank, and give
-						feedback on.
+						earn <span class="tix">Tickets</span>
+						and help your fellow developers earn them too! Each voting
+						match-up will give you 3 random projects, which you need
+						to test, rank, and give feedback on.
 					</p>
 				</div>
 			</li>
 			<li>
 				<div>
 					<p class="pb-4">
-						By now you'll have earned some Tickets from voting. If
-						your project didn't do well in voting, don't worry!
-						You'll still earn Tickets at a flat rate based on the
-						time you spent working on your project. Head to the
-						Marketplace to exchange your Tickets for prizes. The
-						winnable prizes are listed below.
+						By now you'll have earned some <span class="tix">
+							Tickets
+						</span>
+						from voting. If your project didn't do well in voting, don't
+						worry! You'll still earn
+						<span class="tix">Tickets</span>
+						at a flat rate based on the time you spent working on your
+						project. Head to the Marketplace to exchange your
+						<span class="tix">Tickets</span>
+						for prizes. The winnable prizes are listed below.
 					</p>
 				</div>
 			</li>
@@ -223,12 +230,17 @@
 	-->
 
 	<p>
-		There's a variety of prizes to be won, and more will be added as the
-		event goes on. Some of it is cool swag, some are resources to help you
-		make your experience even better, and some are just for fun.
+		There's a variety of prizes to spend your hard-earned <span class="tix">
+			Tickets
+		</span>
+		on, and more will be added as the event progresses. Some of it is cool swag,
+		some are resources to help you take your experience to the next level, and
+		some are just for fun.
 	</p>
+</div>
 
-	<div class="grid grid-cols-2 gap-4 pt-6">
+<div class="mx-auto max-w-250 px-4">
+	<div class="prizes grid md:grid-cols-3 grid-cols-2 gap-4 pt-6">
 		<div
 			class="bg-neutral-800 rounded-lg text-center flex flex-col justify-between">
 			<h2 class="py-2">Stickers</h2>
@@ -270,7 +282,7 @@
 				class="w-full bg-neutral-700 rounded-b-lg px-12 py-2" />
 		</div>
 		<div
-			class="bg-neutral-700 rounded-lg text-center grid place-items-center">
+			class="bg-linear-to-b from-neutral-700 from-50% to-neutral-700/0 rounded-lg text-center grid place-items-center">
 			<h2 class="py-2">and much more...</h2>
 		</div>
 	</div>
@@ -391,7 +403,7 @@
 		<Login />
 	</div>
 
-	<footer class="text-neutral-400 text-sm text-center pt-12">
+	<footer class="text-neutral-400 text-sm text-center pt-18 pb-24">
 		<a
 			href="https://create.roblox.com/"
 			target="_blank"

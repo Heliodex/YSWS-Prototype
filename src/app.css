@@ -60,7 +60,8 @@
 }
 
 body {
-	background: rgb(17, 19, 22);
+	/* background: rgb(17, 19, 22); */
+	background: linear-gradient(rgb(17, 19, 22), rgba(8, 10, 13));
 	color: white;
 	margin: 0;
 	display: flex;
@@ -147,6 +148,24 @@ ol {
 	}
 }
 
+/* offset every 2nd li to the left */
+/* @media (900px <= width < 1200px) {
+	ol li:nth-child(2n+1) {
+		@apply -translate-x-1;
+	}
+	ol li:nth-child(2n) {
+		@apply -translate-x-1;
+	}
+}
+@media (width >= 1200px) {
+	ol li:nth-child(2n+1) {
+		@apply -translate-x-2;
+	}
+	ol li:nth-child(2n) {
+		@apply translate-x-2;
+	}
+} */
+
 form fieldset {
 	display: flex;
 	flex-direction: column;
@@ -188,4 +207,22 @@ select {
 select,
 input[type="file"] {
 	cursor: pointer;
+}
+
+details:hover:not([open]) {
+	@apply bg-neutral-800;
+}
+
+.tix {
+	@apply text-yellow-400 font-bold;
+}
+
+.prizes > div {
+	@apply hover:scale-103 transition-transform;
+}
+.prizes > div:nth-child(2n) {
+	@apply hover:rotate-2;
+}
+.prizes > div:nth-child(2n+1) {
+	@apply hover:-rotate-2;
 }
