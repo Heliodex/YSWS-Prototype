@@ -2,18 +2,23 @@
 	import { enhance } from "$app/forms"
 
 	const name = "OpenBlox"
+	const tix = 0
 </script>
 
 <div id="main" class="mx-auto max-w-200 px-4 py-8">
 	<h1 class="text-2xl">Dashboard</h1>
 
-	<p class="pb-8">
+	<p class="pb-4">
 		Welcome to your {name} dashboard! This page is under construction...
+	</p>
+	<p class="pb-8">
+		You have <b>{tix}</b>
+		<span class="tix">Tickets.</span>
 	</p>
 
 	<h2>Projects</h2>
 
-	<div class="grid gap-4 grid-cols-3 py-4">
+	<div class="grid gap-4 grid-cols-3 pt-4 pb-8">
 		<div class="bg-neutral-700/50 border border-neutral-500 rounded-lg">
 			<img
 				src="https://placehold.co/300x150"
@@ -44,6 +49,32 @@
 				<p class="text-sm">Click to create a new project!</p>
 			</div>
 		</a>
+	</div>
+
+	<h2>Featured projects</h2>
+
+	<div class="grid gap-4 grid-cols-3 pt-4 pb-8">
+		<div class="bg-neutral-700/50 border border-neutral-500 rounded-lg">
+			<img
+				src="https://placehold.co/300x150"
+				alt="Screenshot"
+				class="rounded-t-lg" />
+			<div class="p-4">
+				<h3 class="text-xl font-bold">Placeholder 3</h3>
+				<p class="text-sm">4 million lines of Luau!</p>
+			</div>
+		</div>
+
+		<div class="bg-neutral-700/50 border border-neutral-500 rounded-lg">
+			<img
+				src="https://placehold.co/300x150"
+				alt="Screenshot"
+				class="rounded-t-lg" />
+			<div class="p-4">
+				<h3 class="text-xl font-bold">Placeholder 4</h3>
+				<p class="text-sm">Now with more Microtransactions.</p>
+			</div>
+		</div>
 	</div>
 
 	<form use:enhance method="post" action="/api?/logout" class="pt-4">

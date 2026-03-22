@@ -255,7 +255,7 @@
 			<img
 				src="/prizes/adcredits.png"
 				alt="Ad credits"
-				class="w-full bg-neutral-700 rounded-b-lg" />
+				class="w-full bg-neutral-700 rounded-b-lg px-0.5 pb-0.5" />
 		</div>
 		<div
 			class="bg-neutral-800 rounded-lg text-center flex flex-col justify-between">
@@ -275,11 +275,11 @@
 		</div>
 		<div
 			class="bg-neutral-800 rounded-lg text-center flex flex-col justify-between">
-			<h2 class="py-2">"Best projects" page listing</h2>
+			<h2 class="py-2">"Featured projects" listing</h2>
 			<img
-				src="/prizes/stickers.webp"
-				alt="Best Projects listing"
-				class="w-full bg-neutral-700 rounded-b-lg px-12 py-2" />
+				src="/prizes/featured.png"
+				alt="Featured projects listing"
+				class="w-full bg-neutral-700 rounded-b-lg px-0.5 pb-0.5" />
 		</div>
 		<div
 			class="bg-linear-to-b from-neutral-700 from-50% to-neutral-700/0 rounded-lg text-center grid place-items-center">
