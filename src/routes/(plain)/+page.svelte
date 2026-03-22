@@ -105,7 +105,7 @@
 					<img
 						src="/dashboard.png"
 						alt="Dashboard page"
-						class="rounded-lg border-4 border-neutral-700 opacity-90 rotate-2" />
+						class="rounded-lg border-4 border-neutral-700 opacity-90 rotate-2 hover:rotate-1 hover:scale-102 transition-transform shadow-xl shadow-black" />
 				</div>
 			</li>
 
@@ -125,7 +125,7 @@
 					<img
 						src="/new.png"
 						alt="New project page"
-						class="rounded-lg border-4 border-neutral-700 opacity-90 -rotate-2" />
+						class="rounded-lg border-4 border-neutral-700 opacity-90 -rotate-2 hover:-rotate-1 hover:scale-102 transition-transform shadow-xl shadow-black" />
 				</div>
 			</li>
 
