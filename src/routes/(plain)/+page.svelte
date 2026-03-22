@@ -151,7 +151,7 @@
 
 					<div class="grid sm:grid-cols-[11fr_9fr] gap-4 pt-4">
 						<div
-							class="bg-neutral-700 border-4 border-neutral-700 hover:border-neutral-500 transition-all rounded-lg px-3 py-1 hover:transform-[perspective(800px)_rotateY(5deg)]">
+							class="bg-neutral-700 border-4 border-neutral-700 hover:border-neutral-500 transition-all rounded-lg px-3 py-1 hover:transform-[perspective(800px)_rotateX(3deg)_rotateY(7deg)]">
 							Screen recording with
 							<a
 								href="https://lapse.hackclub.com"
@@ -172,7 +172,7 @@
 							</div>
 						</div>
 						<div
-							class="bg-neutral-700 border-4 border-neutral-700 hover:border-neutral-500 transition-all rounded-lg px-3 py-1 hover:transform-[perspective(800px)_rotateY(-5deg)]">
+							class="bg-neutral-700 border-4 border-neutral-700 hover:border-neutral-500 transition-all rounded-lg px-3 py-1 hover:transform-[perspective(800px)_rotateX(3deg)_rotateY(-7deg)]">
 							Hour recording with Hack Hour, a Slack bot to notify
 							before and during a work session.
 
