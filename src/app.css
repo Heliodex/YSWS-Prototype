@@ -223,6 +223,65 @@ details:hover:not([open]) {
 .prizes > div:nth-child(2n) {
 	@apply hover:rotate-2;
 }
-.prizes > div:nth-child(2n+1) {
+.prizes > div:nth-child(2n + 1) {
 	@apply hover:-rotate-2;
+}
+
+/* dots */
+
+#how::before {
+	content: "";
+	position: absolute;
+
+	margin-left: -5rem;
+	margin-top: 22rem;
+
+	width: 5rem;
+	height: 24rem;
+	background: url(/dots.svg);
+	background-size: contain;
+}
+
+#how::after {
+	content: "";
+	position: absolute;
+
+	margin-left: 50rem;
+	margin-top: -36rem;
+
+	width: 5rem;
+	height: 45rem;
+	background: url(/dots2.svg);
+	background-size: contain;
+}
+
+#faq::before {
+	content: "";
+	position: absolute;
+
+	margin-left: 4rem;
+	margin-top: 6rem;
+
+	width: 5rem;
+	height: 30rem;
+	background: url(/dots2.svg);
+	background-size: contain;
+
+	/* flip horizontally */
+	transform: scaleX(-1);
+}
+
+#faq::after {
+	content: "";
+	position: absolute;
+
+	margin-left: 51rem;
+	margin-top: -26rem;
+
+	width: 5rem;
+	height: 24rem;
+	background: url(/dots.svg);
+	background-size: contain;
+
+	transform: scaleX(-1);
 }

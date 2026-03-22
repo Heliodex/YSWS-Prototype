@@ -14,7 +14,7 @@
 	<summary class="p-2 px-4 block cursor-pointer">
 		{title}
 	</summary>
-	<p class="p-2 px-4 bg-neutral-800 rounded-b-lg">
+	<p class="px-4 py-2 bg-neutral-800 rounded-b-lg">
 		{@render children()}
 	</p>
 </details>

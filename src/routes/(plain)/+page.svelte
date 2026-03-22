@@ -54,7 +54,7 @@
 	<div class="mx-auto max-w-150 py-8">
 		<!-- disclaimer -->
 		<div
-			class="bg-yellow-500/40 border border-yellow-400 px-4 py-2 rounded-lg">
+			class="bg-yellow-500/40 border border-yellow-400 px-4 py-2 rounded-lg shadow-yellow-400/50 shadow-lg">
 			<h2 class="pb-2">Disclaimer</h2>
 
 			<blockquote class="text-xs">
@@ -149,7 +149,7 @@
 						both for different parts of your workflow:
 					</p>
 
-					<div class="grid grid-cols-2 gap-4 pt-4">
+					<div class="grid sm:grid-cols-2 gap-4 pt-4">
 						<div
 							class="bg-neutral-700 border-4 border-neutral-700 hover:border-neutral-500 transition-colors rounded-lg px-3 py-1">
 							Screen recording with
@@ -242,7 +242,7 @@
 </div>
 
 <div class="mx-auto max-w-250 px-4">
-	<div class="prizes grid md:grid-cols-3 grid-cols-2 gap-4 pt-6">
+	<div class="prizes grid md:grid-cols-3 sm:grid-cols-2 gap-4 pt-6">
 		<div
 			class="bg-neutral-800 rounded-lg text-center flex flex-col justify-between">
 			<h2 class="py-2">Stickers</h2>
@@ -284,7 +284,7 @@
 				class="w-full bg-neutral-700 rounded-b-lg px-0.5 pb-0.5" />
 		</div>
 		<div
-			class="bg-linear-to-b from-neutral-700 from-50% to-neutral-700/0 rounded-lg text-center grid place-items-center">
+			class="bg-linear-to-b from-neutral-700 from-50% to-neutral-700/0 rounded-lg text-center grid place-items-center min-h-30">
 			<h2 class="py-2">and much more...</h2>
 		</div>
 	</div>
